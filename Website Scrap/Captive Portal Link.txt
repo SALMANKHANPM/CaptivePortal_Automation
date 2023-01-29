@@ -1,0 +1,1 @@
+https://captiveportal.kluniversity.in/portal/login/?post=https%3A%2F%2Futm.kluniversity.in%3A1003%2Ffgtauth&magic=011b963b7bfa2a69&usermac=d0%3A7e%3A28%3Abe%3A61%3A4f&apmac=e0%3A23%3Aff%3Aaf%3A89%3A7d&apip=192.168.51.5&userip=10.46.113.252&ssid=KLU-LAN-2-HP-Core&apname=FortiGate-3300E&bssid=00%3A00%3A00%3A00%3A00%3A00

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="referrer" content="strict-origin" />
+    <title>Login</title>
+    <style>
+      @font-face {
+        font-family: "Lato";
+        src: url("/site_media/css/fonts/Lato-Regular.ttf");
+      }
+      body {
+        background-color: white;
+        font-family: Lato, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      p.success {
+        color: green;
+      }
+      .login_link {
+        bottom: -10px;
+        position: absolute;
+      }
+      .login_msg_bar {
+        clear: both;
+        font-size: 15px;
+        position: relative;
+        text-align: center;
+        top: -190px;
+        width: 352px;
+      }
+      .login_msg_bar p.error {
+        color: red;
+      }
+      .login_msg_bar p.info {
+        color: #007722;
+      }
+      .lost-div-container {
+        padding: 5px;
+        text-align: right;
+      }
+      #login {
+        height: 200px;
+        left: 50%;
+        margin-left: -140px;
+        margin-top: -110px;
+        position: relative;
+        top: 40%;
+        width: 280px;
+      }
+      #login a,
+      #login a:visited {
+        color: #5b80b2;
+      }
+      .different_user_link a,
+      .different_user_link a:visited {
+        color: #5b80b2;
+      }
+      #login .option a,
+      #login .option a:visited {
+        color: #5b80b2;
+      }
+      #login label {
+        float: left;
+        font-size: 14px;
+      }
+      #login input[type="text"],
+      #login input[type="password"],
+      #login .field {
+        font-size: 16.5px;
+        width: 100%;
+        border-radius: 0;
+        color: #262626;
+        vertical-align: baseline;
+        margin: 0.2em;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #a9a9a9;
+        background-color: #fff;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 2px 0.5em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      #login input[type="text"]:focus,
+      #login input[type="password"]:focus,
+      #login .field:focus {
+        border-style: solid;
+        border-color: black;
+      }
+      #login input.submit {
+        font-size: 15px;
+        font-weight: 400;
+        color: #fff;
+        background: linear-gradient(#00a513, #004405);
+        border-color: #007d0e;
+        width: 99%;
+        height: 27px;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 5px;
+        border: 0px;
+        margin-top: 20px;
+        font-family: "Lato";
+      }
+      #login table {
+        margin-bottom: 0;
+        width: 100%;
+      }
+      #login th,
+      #login td {
+        padding: 2px 0;
+        text-align: center;
+        font-size: 15px;
+      }
+      #login .inner_wrapper {
+        display: block;
+        height: 110px;
+        margin-top: 20px;
+      }
+      #login .option {
+        bottom: -15px;
+        font-size: 11px;
+        height: 32px;
+        padding-left: 2px;
+        padding-top: 10px;
+        position: relative;
+        width: 150px;
+      }
+      .different_user_link {
+        clear: both;
+        font-size: 15px;
+        position: relative;
+        text-align: center;
+        bottom: -205px;
+        width: 352px;
+      }
+      #login_wrapper {
+        background: #f6f6f6;
+        border: 1px solid #c8c8c8;
+        height: 266.1px;
+        left: 50%;
+        margin-left: -176px;
+        margin-top: -100px;
+        padding: 4px;
+        position: fixed;
+        top: 50%;
+        width: 352px;
+      }
+      .title {
+        text-align: center;
+      }
+      .title.logo {
+        text-align: left;
+      }
+      #klu_logo {
+        width: 50px;
+        height: 50px;
+      }
+      #header {
+        margin-left: -40px;
+        margin-right: -40px;
+        background: #008b10;
+        padding: 5px 10px;
+      }
+      .field-icon {
+        float: right;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/site_media/css/font-awesome/css/font-awesome.css?v=0687"
+    />
+  </head>
+  <body>
+    <div id="login_wrapper">
+      <div id="login">
+        <div id="header" class="title logo">
+          <img
+            id="klu_logo"
+            src="/customviews/image/klu_logo:fdbd18a4bb08f125e67c4156996a6744/"
+            alt=""
+          />
+        </div>
+        <div class="inner_wrapper">
+          <form id="login_form" action="" method="post" autocomplete="off">
+            <input
+              type="hidden"
+              name="csrfmiddlewaretoken"
+              value="en2T6QTRBG45xAOGZ9YxxEd2yml1QjjPsPlIl5Zs1vbcUpmLpXmjprzgkfAbrztf"
+            />
+            <div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input
+                        id="id_username"
+                        placeholder="Username"
+                        maxlength="253"
+                        name="username"
+                        type="text"
+                        value=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        id="id_password"
+                        placeholder="Password"
+                        name="password"
+                        type="password"
+                      />
+                      <span
+                        toggle="#id_password"
+                        class="fa fa-fw fa-eye field-icon toggle-password"
+                      ></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <input type="hidden" name="" value="" />
+              <input class="submit" type="submit" value="Login" />
+            </div>
+          </form>
+        </div>
+        <div class="option">
+          <div id="reg_link"><a href="" target="">Register</a></div>
+          <div id="resetpwd_link">
+            <a
+              class="login_link"
+              href="/portal/reset-pwd/?next=%2Fportal%2Flogin%2F%3Fpost%3Dhttps%253A%252F%252Futm.kluniversity.in%253A1003%252Ffgtauth%26magic%3D051f983d90187bab%26usermac%3Dd0%253A7e%253A28%253Abe%253A61%253A4f%26apmac%3De0%253A23%253Aff%253Aaf%253A89%253A7d%26apip%3D192.168.51.5%26userip%3D10.46.113.252%26ssid%3DKLU-LAN-2-HP-Core%26apname%3DFortiGate-3300E%26bssid%3D00%253A00%253A00%253A00%253A00%253A00"
+              target=""
+              >Forgot my password</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="login_msg_bar">
+        <p class="error"></p>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="/site_media/js/jquery/jquery.js"
+    ></script>
+    <script type="text/javascript">
+      username_value = document.getElementById("id_username").value;
+      if (username_value) {
+        document.getElementById("id_password").focus();
+      } else {
+        document.getElementById("id_username").focus();
+      }
+      var register_url = "";
+      if (!register_url) {
+        var elem = document.getElementById("reg_link");
+        elem.parentNode.removeChild(elem);
+      }
+      var pwdreset_url =
+        "/portal/reset-pwd/?next=%2Fportal%2Flogin%2F%3Fpost%3Dhttps%253A%252F%252Futm.kluniversity.in%253A1003%252Ffgtauth%26magic%3D051f983d90187bab%26usermac%3Dd0%253A7e%253A28%253Abe%253A61%253A4f%26apmac%3De0%253A23%253Aff%253Aaf%253A89%253A7d%26apip%3D192.168.51.5%26userip%3D10.46.113.252%26ssid%3DKLU-LAN-2-HP-Core%26apname%3DFortiGate-3300E%26bssid%3D00%253A00%253A00%253A00%253A00%253A00";
+      if (!pwdreset_url) {
+        var elem = document.getElementById("resetpwd_link");
+        elem.parentNode.removeChild(elem);
+      }
+      $(".toggle-password").click(function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>
